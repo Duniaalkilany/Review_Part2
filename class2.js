@@ -40,7 +40,7 @@ hello.innerHTML="option"//change content of html element //also change the conte
 console.log(hello.innerHTML)//option 
 console.log(test)
 console.log(test.innerHTML)
-test.innerHTML="dunia \nabd \nalkilany"
+
 document.write("<h5>dunia\nsaif</h5>")
 console.log(
     "<h5>dunia\nsaif</h5>"  
@@ -207,3 +207,36 @@ let var5=`<div>
 
 document.write(var5.repeat(5))//ES6 Repeat 
 
+/* Output To Screen :
+window.alert
+document.write
+console.log
+*/
+
+window.console.log('hiiiiiiiiiiii')
+window.alert('hello im dunia')//do not use it , it stop the program till press ok 
+
+window.document.write('<h1>testing document.write</h1>')
+test.innerHTML="dunia \nabd \nalkilany"
+test.innerHTML='my name is : dunia'
+// document.getElementById('test').innerHTML='testing dom inner html '
+
+// document.getElementById("test").style('color: blue')
+
+console.error('error')
+console.table([1,2,3,4,5])
+console.log('testing directive %cjsfile','color:red')
+console.log('%cdunid%calkilany',"color:red; font-size: larger" , "color:blue ; font-size: smaller ")
+
+console.log(typeof('dunia'))
+//object 
+let obj1={
+
+key1:'duniakey1',
+key1:'alkilanykey1'
+}
+
+console.log(typeof obj1)
+console.log(obj1.key1)
+
+console.log(typeof undefined)

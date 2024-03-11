@@ -1,4 +1,4 @@
-//dom : interact with html from js . 
+//dom : interact with html from js //Document Object Model  . 
 document.write("<h2>DOM : Write to html from js </h2>")
 //when using js to write on html aware that script tag at the end of html file or on the js use window.onload function to execute js when all html element loaded . 
  window.onload=function () {
