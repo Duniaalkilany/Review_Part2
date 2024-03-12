@@ -371,3 +371,92 @@ return ele.toLowerCase()
 console.log(`convertWord :${convertWord}`)
 
 
+//  - Inverted Numbers (+==>-//-===>+)
+
+let numbers  = [10, -10,20,30,-50]
+
+let invertedNumbers= numbers.map(function (ele){
+return - ele 
+})
+
+console.log(invertedNumbers)
+
+//ignore numbers using map 
+//to use map it should be array 
+//from string to array use split 
+let ignoreNumbers = "Elz123er4o";
+
+let ignoreNumbersString= ignoreNumbers.split("").map((ele)=>{
+if ( isNaN(parseInt(ele)) === true){
+    return ele
+}
+}).join('')
+console.log(`ignoreNumbersString:${ignoreNumbersString}`)
+
+// let test = 'm'
+// let test1= parseInt(test)
+// console.log(test1)
+// console.log(isNaN(test1))
+
+/*
+filter : array 'higher order function'
+take function as a parameter
+*/   
+
+ numbers=[10,20,12,14,11,3,5]
+
+let newNumbers=function(arr){
+    let newArr=[]
+    for (let i =0 ; i < arr.length ; i++){
+if (arr[i]%2===0){
+newArr.push(arr[i])
+}
+    }
+    return newArr
+}
+
+
+console.log(newNumbers(numbers))
+
+//using filter :
+newNumbers= numbers.filter((ele)=>{
+return ele%2===0
+})
+console.log(newNumbers)
+console.log(`newNumbers:${newNumbers}`)
+
+// Get Friends With Name Starts With A
+
+let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
+
+let filteredFriends = friends.filter(function(ele){
+return ele.startsWith("A")
+})
+console.log(filteredFriends)
+
+//Filter Words More Than 4 Characters
+
+let sentence = "I Love Foood Code Too Playing Much";
+let newWord= sentence.split(" ").filter((ele)=>{
+  console.log(`ele:${ele}`)
+return ele.length === 4
+}).join(" ")
+
+console.log(newWord)
+
+// let sen ="I Love Foood Code Too Playing Much";
+// let senArr= sen.split(" ")
+// console.log(senArr)
+
+// Ignore Numbers 
+
+let ignoreNumbers2 = "Elz123er4o";
+
+let ignoreWord=ignoreNumbers2.split("").filter((ele)=>{
+return isNaN(parseInt(ele))
+}).join('')
+
+console.log(ignoreWord)
+
+//filter then multiply
+let mix = "A13BS2ZX";
