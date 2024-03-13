@@ -458,5 +458,178 @@ return isNaN(parseInt(ele))
 
 console.log(ignoreWord)
 
-//filter then multiply
+/*filter then multiply
+i have string
+i need just a number from it //if number //return true//pass the ele
+them i will have filterd array(array of numbers)
+i want to return new array each element * element
+*/
+
 let mix = "A13BS2ZX";
+
+let filterdMix= mix.split("").filter((ele)=>{
+    return !isNaN(parseInt(ele))
+}
+    ).map((ele)=>{
+return ele*ele
+})
+
+console.log(filterdMix)
+
+/*
+Higher Order Functions : Reduce 
+
+*/
+
+ test = [10,20,30,40]
+console.log('......................................................................')
+let reduceTest= test.reduce((acc,cur, idx,arr)=>{
+console.log(`acc : ${acc}`)
+console.log(`cur :${cur}`)
+console.log(`idx :${idx}`)
+console.log(`arr :${arr}`)
+return acc 
+})
+console.log(reduceTest)//10
+console.log('......................................................................')
+
+
+let testReduce = test.reduce((acc , cur , idx , arr)=>{
+    console.log(`acc : ${acc}`)
+    console.log(`cur :${cur}`)
+    console.log(`idx :${idx}`)
+    console.log(`arr :${arr}`)
+ 
+}, 5 )
+
+console.log(testReduce)//105
+
+/*
+acc=5
+cur = 10
+idx = 0
+
+
+acc =15
+cur=20
+
+acc =35
+cur = 30
+
+acc = 65
+cur = 40
+return acc + cur = 65+40 = 105
+*/
+
+
+//sum of all elements
+let nums = [10, 20, 15, 30];
+
+let sumNums = nums.reduce((acc, cur)=>{
+return acc+cur 
+})
+
+console.log(sumNums)
+
+
+let theBiggest = [
+    "Bla",
+    "Propaganda",
+    "Other",
+    "AAA",
+    "Battery",
+    "Test",
+    "Propaganda_Two",
+  ];
+
+//return biggest word : 
+//using reduce 
+console.log('****************************************************************************************************************')
+let bigWord= theBiggest.reduce((acc,cur,idx )=>{
+console.log(`acc : ${acc}`)
+console.log(`cur : ${cur}`)
+console.log(`idx : ${idx}`)
+return acc.length > cur.length ? acc : cur 
+})
+console.log(bigWord)//Propaganda_Two
+console.log('***********************************************************************************************************')
+/*
+acc : bla 
+cur : Propaganda
+idx = 1 
+
+acc : Propaganda
+cur : Other
+idx : 2
+
+
+acc : Propaganda
+cur : AAA
+idx : 3
+
+acc : Propaganda
+cur : Battery
+idx : 4
+
+acc : Propaganda
+cur : Test
+idx : 5
+
+
+acc : Propaganda
+cur : Propaganda_Two
+idx : 6
+
+*/
+
+let removeChars = ["E", "@", "@", "L", "Z", "@", "@", "E", "R", "@", "O"];
+
+//ELZERO
+let outPut = removeChars.filter((ele)=>{
+return ! ele.startsWith("@")
+}).join("")
+
+console.log(outPut)
+
+
+let outPut2 = removeChars.filter((ele)=>{
+    return ! ele.startsWith("@")
+}).reduce((acc , cur )=>{
+return `${acc}${cur}`
+})
+
+console.log(outPut2 )
+
+
+let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
+
+/* Elzero Web School 
+
+You Can Use
+- ,
+- _
+- Space
+- True => 1 => One Time Only In The Code
+
+You Cannot Use
+- Numbers
+- Letters
+
+- You Must Use [Filter + Map + Reduce + Your Knowledge]
+- Order Is Not Important
+- All In One Chain
+
+*/
+
+
+//['1', ',', '2', ',', '3', ',', 'E', 'E', ',', 'l', ',', 'z', ',', 'e', ',', 'r', ',', 'o', ',', '_', ',', 'W', ',', 'e', ',', 'b', ',', '_', ',', 'S', ',', 'c', ',', 'h', ',', 'o', ',', 'o', ',', 'l', ',', '2', ',', '0', ',', 'Z']
+
+
+let solution = myString.split("").filter((ele)=>{
+
+})
+console.log(solution)
+
+
+
+
